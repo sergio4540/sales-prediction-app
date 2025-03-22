@@ -1,0 +1,77 @@
+/* sales-prediction.component.scss */
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: black;
+  margin-bottom: 20px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.search-field {
+  width: 300px;
+}
+
+.table-container {
+  overflow-x: auto;
+  border-radius: 4px;
+}
+
+table {
+  width: 100%;
+  background-color: white;
+}
+
+.mat-mdc-header-cell {
+  background-color: black !important;
+}
+
+.mat-mdc-row {
+color: black;
+}
+
+.mat-mdc-raised-button:not(:disabled){
+  background-color: white;
+  color: red;
+}
+
+.mat-mdc-raised-button:not(:disabled){
+  color: red;
+}
+
+.red{
+  background-color: red;
+}
+
+.mat-cell, .mat-header-cell {
+  padding: 0 16px;
+}
+
+.action-buttons {
+  // display: flex;
+  display: table-cell;
+  gap: 10px;
+}
+
+mat-paginator {
+  background-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .action-buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .search-field {
+    width: 100%;
+  }
+}

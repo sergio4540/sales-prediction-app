@@ -1,0 +1,66 @@
+<!-- orders-view.component.html -->
+<div class="orders-view-container">
+  <h2 mat-dialog-title>{{ data.customerName }} - Orders</h2>
+
+  <div mat-dialog-content>
+    <div class="mat-elevation-z8 table-container">
+      <table mat-table [dataSource]="dataSource" matSort (matSortChange)="onSortChange()">
+
+        <!-- Order ID Column -->
+        <ng-container matColumnDef="orderId">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Order ID</th>
+          <td mat-cell *matCellDef="let order">{{ order.orderId }}</td>
+        </ng-container>
+
+        <!-- Required Date Column -->
+        <ng-container matColumnDef="requiredDate">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Required Date</th>
+          <td mat-cell *matCellDef="let order">{{ order.requiredDate | date:'shortDate' }}</td>
+        </ng-container>
+
+        <!-- Shipped Date Column -->
+        <ng-container matColumnDef="shippedDate">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Shipped Date</th>
+          <td mat-cell *matCellDef="let order">{{ order.shippedDate | date:'shortDate' }}</td>
+        </ng-container>
+
+        <!-- Ship Name Column -->
+        <ng-container matColumnDef="shipName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Ship Name</th>
+          <td mat-cell *matCellDef="let order">{{ order.shipName }}</td>
+        </ng-container>
+
+        <!-- Ship Address Column -->
+        <ng-container matColumnDef="shipAddress">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Ship Address</th>
+          <td mat-cell *matCellDef="let order">{{ order.shipAddress }}</td>
+        </ng-container>
+
+        <!-- Ship City Column -->
+        <ng-container matColumnDef="shipCity">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Ship City</th>
+          <td mat-cell *matCellDef="let order">{{ order.shipCity }}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+        <!-- Row shown when there is no data -->
+        <tr class="mat-row" *matNoDataRow>
+          <td class="mat-cell" colspan="6">No orders found for this customer</td>
+        </tr>
+      </table>
+
+      <mat-paginator
+        [length]="totalItems"
+        [pageSize]="10"
+        [pageSizeOptions]="[5, 10, 25, 100]"
+        (page)="onPageChange($event)">
+      </mat-paginator>
+    </div>
+  </div>
+
+  <div mat-dialog-actions align="end">
+    <button mat-button color="primary" (click)="close()">Close</button>
+  </div>
+</div>

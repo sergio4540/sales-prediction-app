@@ -2,15 +2,52 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
 
+## Prerequisites
+
+Node.js (v16 or higher)
+npm (v8 or higher)
+Angular CLI v19.2.3
+
+## Installation
+
+1.Clone the repository
+git clone <repository-url>
+cd sales-prediction-app
+
+2.Install dependencies
+npm install
+
+3.Make sure the SQL Server backend is running and accessible at the URL configured in the environment files
+
 ## Development server
 
-To start a local development server, run:
+Run ng serve for a dev server. Navigate to http://localhost:4200/. The application will automatically reload if you change any of the source files.
 
-```bash
-ng serve
-```
+## Build
+Run ng build to build the project. The build artifacts will be stored in the dist/ directory.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Running unit tests
+Run ng test to execute the unit tests via Karma.
+
+## Features
+-Sales Date Prediction View: Displays a list of clients with their last order date and predicted next order date
+-Orders View: Shows all orders for a selected client
+-New Order Form: Allows creation of new orders with product details
+
+## Implementation Notes
+-The application is built with Angular 19 and Angular Material
+-All components follow the requirements specified in the technical test document
+-The application implements server-side filtering, sorting, and pagination
+-The forms include validation for all required fields and data types
+
+## Project Structure
+src/app/models: Contains all data models
+src/app/services: Contains services for API communication
+src/app/components: Contains all application components
+
+  sales-prediction: Home component displaying client predictions
+  orders-view: Modal component showing client orders
+  new-order-form: Modal component for creating new orders
 
 ## Code scaffolding
 

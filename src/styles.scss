@@ -1,1 +1,56 @@
+/* styles.scss */
 /* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Custom scrollbar for tables */
+.mat-table {
+  width: 100%;
+  overflow: auto;
+}
+
+.mat-cell, .mat-header-cell {
+  padding: 8px 16px;
+  word-break: break-word;
+}
+
+/* Custom styling for form elements */
+.mat-form-field {
+  width: 100%;
+}
+
+.mat-mdc-dialog-surface{
+  background-color: white !important;
+  width: 900px !important;
+}
+
+/* Material Dialog customizations */
+.mat-dialog-container {
+  padding: 0 !important;
+}
+
+.success-snackbar {
+  background-color: #4caf50;
+  color: white;
+}
+
+.error-snackbar {
+  background-color: #f44336;
+  color: white;
+}
+
+.mat-mdc-snack-bar-container {
+  &.success-snackbar {
+    --mdc-snackbar-container-color: #4caf50;
+    --mat-mdc-snack-bar-button-color: white;
+    --mdc-snackbar-supporting-text-color: white;
+  }
+
+  &.error-snackbar {
+    --mdc-snackbar-container-color: #f44336;
+    --mat-mdc-snack-bar-button-color: white;
+    --mdc-snackbar-supporting-text-color: white;
+  }
+}
+
+
