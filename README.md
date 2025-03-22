@@ -1,6 +1,7 @@
 # SalesPredictionApp
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
+![imagen](https://github.com/user-attachments/assets/07412b23-f6cb-4e9e-91ec-68adafb6c5b9)
 
 ## Prerequisites
 
